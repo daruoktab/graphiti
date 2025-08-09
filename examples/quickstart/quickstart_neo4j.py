@@ -195,9 +195,9 @@ async def main():
         # nodes directly instead of edges.
         #################################################
 
-        # Example: Perform a node search using _search method with standard recipes
+        # Example: Perform a node search using search_ method with standard recipes
         print(
-            '\nPerforming node search using _search method with standard recipe NODE_HYBRID_SEARCH_RRF:'
+            '\nPerforming node search using search_ method with standard recipe NODE_HYBRID_SEARCH_RRF:'
         )
 
         # Use a predefined search configuration recipe and modify its limit
@@ -205,7 +205,7 @@ async def main():
         node_search_config.limit = 5  # Limit to 5 results
 
         # Execute the node search
-        node_search_results = await graphiti._search(
+        node_search_results = await graphiti.search_(
             query='California Governor',
             config=node_search_config,
         )
